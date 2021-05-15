@@ -14,9 +14,12 @@ class MedicosController extends \yii\web\Controller
         ]);
     }
 
-    public function actionView()
+    public function actionView($id)
     {
-        return $this->render('view');
+
+        $medico =  Medicos::findOne($id);
+
+        return $this->render('view',['medico' -> $medico]);
     }
 
 }
