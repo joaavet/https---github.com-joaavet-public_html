@@ -19,7 +19,7 @@ class MedicosController extends \yii\web\Controller
 
         $medico =  Medicos::findOne($id);
 
-        return $this->render('view',['medico' -> $medico]);
+        return $this->render('view',['medico' => $medico]);
     }
 
 }

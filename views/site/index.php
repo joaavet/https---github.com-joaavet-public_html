@@ -64,12 +64,12 @@ $this->title = Yii::$app->name;
       
       
       <div class="row">
-        <?php Foreach ($medicos as $key -> $Medico): ?>
+        <?php Foreach ($medicos as $key => $medico): ?>
         <div class="col-lg-4 text-center">
-        <img class="img-circle" src="<?php echo $medico->Imagem ?>" alt="Foto do Dr. <?php echo $medico->Nome ?>" width="240" height="240">
-          <h2>"<?php $Medico->Imagem ?>"</h2>
-          <p>"<?php $Medico->CRM ?>"</p>
-          <p><a class="btn btn-default" href="<?php yii\helpers\url::toRoute(['medicos/view', 'id'-> $medico->Medico_id]); ?>" role="button">View details »</a></p>
+        <img class="img-circle" src="<?php echo $medico->imagem ?>" alt="Foto do Dr. <?php echo $medico->Nome ?>" width="240" height="240">
+          <h2><?php echo $medico->Nome ?></h2>
+          <p><?php echo $medico->Crm ?></p>
+          <p><a class="btn btn-default" href="<?php echo  yii\helpers\Url::toRoute(['medicos/view', 'id' => $medico->Medico_id]); ?>" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <?php endforeach; ?>
       </div>
