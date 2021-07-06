@@ -31,6 +31,12 @@ class Medicos extends \yii\db\ActiveRecord
     {
         return 'Medico';
     }
+    @return \yii\db\ActiveQuary
+        public function getMedico(Especialidades){
+        return this->PassMany(MedicosHasEspecialidades:::classNome(),
+            ('Medico_id' =>'Medico_id")
+        }
+                              }
 
     /**
      * {@inheritdoc}
